@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express-session": "^1.17.2"
+    "express-jwt": "^7.5.0",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1"
   }
 }
