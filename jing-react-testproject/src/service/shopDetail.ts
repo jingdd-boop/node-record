@@ -1,13 +1,8 @@
-import { get, post, put, } from '../utils/request'
-/**
- * 商品详情
- * @param {*}
- * @returns
- */
+import { request } from '../utils/request';
 
-interface goods {
-  goods_id: number
-}
-export function getShopDetail(goods:goods){
-  return get('v1/home/floordata', goods)
-}
+//登录
+export const getShopDetail = (params: any) =>
+  request.get('/api/public/v1/goods/detail', params, { timeout: 15000 });
+
+export const getRoomDetail = (params: any) =>
+  request.get('/room/getRoomInfo', params, { timeout: 15000 });

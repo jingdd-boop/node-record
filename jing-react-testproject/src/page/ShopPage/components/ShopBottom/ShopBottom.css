@@ -1,0 +1,13 @@
+.ShopBottomWrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ShopBottomWrapLeft {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ShopBottomWrapRight {
+}

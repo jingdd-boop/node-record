@@ -1,0 +1,13 @@
+.shopWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.shopContent {
+  height: 86vh;
+}
+
+.shopBottom {
+  overflow-y: scroll;
+  flex: 1;
+}

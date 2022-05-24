@@ -1,15 +1,9 @@
-const { overrideDevServer } = require('customize-cra');
+const { override, addLessLoader } = require('customize-cra');
 
-const addDevServerConfig = () => (config) => {
-  // 在这里写你自己的配置
-  return {
-    ...config,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-    },
-  };
-};
-
-module.exports = {
-  devServer: overrideDevServer(addDevServerConfig()),
-};
+module.exports = override(
+  addLessLoader({
+    strictMath: true,
+    noIeCompat: true,
+    localIdentName: '[local]--[hash:base64:5]', // if you use CSS Modules, and custom `localIdentName`, default is '[local]--[hash:base64:5]'.
+  })
+);
