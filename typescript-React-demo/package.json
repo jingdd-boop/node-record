@@ -1,0 +1,63 @@
+{
+  "name": "typescript-react-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vortesnail/react-ts-quick-starter.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint --config .commitlintrc.js -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "eslint --config .eslintrc.js"
+    ],
+    "*.{css,less,scss}": [
+      "stylelint --config .stylelintrc.js"
+    ],
+    "*.{ts,tsx,js,json,html,yml,css,less,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [
+    "react-project",
+    "typescript-project",
+    "react-typescript",
+    "react-ts-quick-starter"
+  ],
+  "author": {
+    "name": "vortesnail",
+    "url": "https://github.com/vortesnail",
+    "email": "1091331061@qq.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vortesnail/react-ts-quick-starter/issues"
+  },
+  "homepage": "https://github.com/vortesnail/react-ts-quick-starter#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.2",
+    "prettier": "^2.6.2",
+    "stylelint": "^14.8.5",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0",
+    "typescript": "^4.7.2"
+  }
+}
